@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__small {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: #ff7c7c;
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* text__wrap */
+        .text__wrap {
+            
+        }
+        .text__inner {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .text__inner .text {
+            width: 32.33333%;
+            border: 1px solid #f5f5f5;
+            border-radius: 10px;
+            padding: 90px 20px 20px 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text__inner .text:hover {
+            background-color: #f5f5f5;
+        }
+        .text__inner .text::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;
+        }
+        .text__inner .text.t1::before {
+            background-color: rgba(247, 227, 109, 0.3);
+            background-image: url(../asset/img/textType01_01.svg);
+        }
+        .text__inner .text.t2::before {
+            background-color: rgba(247, 109, 217, 0.2);
+            background-image: url(../asset/img/textType01_02.svg);
+        }
+        .text__inner .text.t3::before {
+            background-color: rgba(51, 255, 206, 0.2);
+            background-image: url(../asset/img/textType01_03.svg);
+        }
+        .text__inner .text.t4::before {
+            background-color: rgba(141, 255, 51, 0.2);
+            background-image: url(../asset/img/textType01_04.svg);
+        }
+        .text__inner .text.t5::before {
+            background-color: rgba(72, 87, 236, 0.2);
+            background-image: url(../asset/img/textType01_05.svg);
+        }
+        .text__inner .text.t6::before {
+            background-color: rgba(255, 51, 52, 0.2);
+            background-image: url(../asset/img/textType01_06.svg);
+        }
+        .text__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .text__desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text__btn::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background-image: url(../asset/img/icon_plus.svg);
+            transition: all 0.3s;
+        }
+        .text__btn:hover::before {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <section class="text__wrap section center nexon">
+        <div class="container">
+            <span class="section__small">notice</span>
+            <h2 class="section__h2 mb70">반려견 키울때 주의할점</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">견종 선택</h3>
+                    <p class="text__desc">강아지의 크기, 에너지 수준, 태도 및 운동 요구사항을 고려하여 가족과 생활 환경에 적합한 견종을 선택해야 합니다. 견종에 특징과 환경조건을 고려해야 합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">충분한 운동과 활동</h3>
+                    <p class="text__desc">반려견은 많은 운동과 활동이 필요합니다. 일상적인 산책과 놀이는 견종, 나이, 건강 상태 등에 따라 달라질 수 있지만, 적어도 하루에 30분에서 1시간 정도의 활동을 권장합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">올바른 사료와 급여</h3>
+                    <p class="text__desc">강아지의 건강과 성장을 위해 올바른 사료와 급여를 제공하세요. 견종, 나이, 활동 수준 및 건강 상태에 따라 적절한 양과 종류를 선택해야 합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">정기적인 수의사 검진</h3>
+                    <p class="text__desc">반려견의 건강을 지속적으로 모니터링하고 예방 접종, 구충제, 치아 치료 등 필요한 의료 서비스를 제공하세요. 권장되는 검진 주기는 반려견의 나이, 건강 상태 및 생활 환경에 따라 다릅니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">교육과 훈련</h3>
+                    <p class="text__desc">반려견이 매너리즘을 배우고 다른 개와 사람들과 잘 지낼 수 있도록 교육과 훈련을 제공하세요. 올바른 훈련을 통해 반려견과의 관계를 향상시키고 불필요한 행동 문제를 방지할 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">충분한 사랑과 관심</h3>
+                    <p class="text__desc">반려견이 가장 필요로 하는 것은 주인의 사랑과 관심입니다. 꾸준한 규칙적인 관심을 제공하여 반려견과의 사이를 더욱 강화하여 친밀한 관계 유지가 중요합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
