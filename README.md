@@ -17,6 +17,7 @@
 카드 유형01 : https://webstoryboy.github.io/web2023/site/cardType/cardType01.html       
 텍스트 유형01 : https://webstoryboy.github.io/web2023/site/textType/textType01.html        
 슬라이드 유형01 : https://webstoryboy.github.io/web2023/site/sliderType/sliderType01.html   
-헤더 유형01 : https://webstoryboy.github.io/web2023/site/headerType/headerType01.html
+헤더 유형01 : https://webstoryboy.github.io/web2023/site/headerType/headerType01.html   
+이미지/텍스트 유형01 : https://webstoryboy.github.io/web2023/site/imgTextType/imgTextType01.html  
 
 
