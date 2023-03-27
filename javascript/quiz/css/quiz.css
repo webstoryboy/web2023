@@ -285,6 +285,13 @@
 .dog__wrap {
     position: relative;
 }
+.dog__wrap .count {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    font-family: 'PyeongChang';
+}
 .dog__wrap .true {
     width: 120px;
     height: 120px;
