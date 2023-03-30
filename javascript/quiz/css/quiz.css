@@ -265,6 +265,276 @@
     border-right: 10px solid transparent;
 }
 
+/* cbt 유형 */
+.quiz__wrap__cbt {
+    padding: 0 20px;
+    font-family: 'PyeongChang';
+}
+.cbt__conts {
+    width: calc(100% - 300px);
+    background-color: #fff;
+}
+.cbt__header {
+    width: calc(100% - 300px);
+    background-color: #fff;
+    border: 8px ridge #cacaca;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #e3edff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cbt__time {
+    position: relative;
+    padding-left: 40px !important;
+    margin: 3px 0;
+    float: right;
+}
+.cbt__time::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
+}
+.cbt__submit {
+    position: relative;
+    padding-left: 40px !important;
+    float: right;
+    margin: 3px 0;
+}
+.cbt__submit::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 3px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
+}
+.cbt__header > div > div {
+    background-color: #546482;
+    display: inline-block;
+    margin-left: 5px;
+    color: #fff;
+    padding: 3px 20px;
+    border-radius: 20px;
+}
+.cbt__aside {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    height: 800px;
+    width: 280px;
+    background-color: #fff;
+    border: 8px ridge #cacaca;
+}
+.cbt__quiz {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cbt__quiz .cbt {
+    width: 49%;
+    border: 8px ridge #cacaca;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.cbt__quiz .cbt {
+    position: relative;
+}
+.cbt__quiz .cbt.good::after {
+    content: '';
+    background-image: url(../img/O.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cbt__quiz .cbt.bad::after {
+    content: '';
+    background-image: url(../img/X.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.cbt__info {
+    background-color: #e3edff;
+    border-bottom: 8px ridge #cacaca;
+    padding: 20px;
+    text-align: center;
+}
+.cbt__info .title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-bottom: 5px;
+}
+.cbt__info span {
+    display: inline-block;
+}
+.cbt__omr {
+    padding: 20px;
+}
+.cbt__omr .omr {
+    margin: 5px 0;
+    display: grid;
+    grid-template-columns: 50px 38px 38px 38px 38px; 
+    grid-template-rows: 20px;
+    align-items: center;
+}
+.cbt__omr .omr input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.cbt__omr .omr strong {
+    display: inline-block;
+    text-align: center;
+    padding: 2px;
+    background-color: #313e55;
+    color: #fff;
+    font-family: 'Helvetica Neue';
+    margin-right: 10px;
+    font-weight: bold;
+}
+.cbt__omr .omr label {
+    box-shadow: 0 0 0 1px #313e55;
+    cursor: pointer;
+    line-height: 0.4;
+    text-align: center;
+    width: 28px;
+    height: 8px;
+    font-family: 'Helvetica Neue';
+    position: relative;
+}
+.cbt__omr .omr label::after {
+    background-color: #555;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    transition: width 0.1s linear;
+}
+.cbt__omr .omr input[type=radio]:checked + label::after {
+    width: 100%;
+}
+.cbt__omr .omr .label-inner {
+    background-color: #fff;
+    padding: 0.25em 0.13em;
+    transform: translateY(-0.25em);
+    width: 20px;
+    color: #313e55;
+}
+.cbt__question {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.cbt__question__img img {
+    max-width: 400px;
+    margin-bottom: 15px;
+}
+.cbt__question__desc {
+    border: 2px solid #cacaca;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.cbt__selects {
+    margin-bottom: 15px;
+}
+.cbt__selects label {
+    display: flex;
+}
+.cbt__selects label span {
+    font-size: 1rem;
+    padding: 10px 10px 10px 30px;
+    cursor: pointer;
+    color: #444;
+    position: relative;
+}
+.cbt__selects label span::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    text-align: center;
+    font-family: 'PyeongChang';
+    font-weight: bold;
+    line-height: 1.4;
+    font-size: 0.83em;
+    transition: all 0.25s;
+}
+.cbt__selects label:nth-of-type(1) span::before {
+    content: '1';
+}
+.cbt__selects label:nth-of-type(2) span::before {
+    content: '2';
+}
+.cbt__selects label:nth-of-type(3) span::before {
+    content: '3';
+}
+.cbt__selects label:nth-of-type(4) span::before {
+    content: '4';
+}
+.cbt__selects input {
+    position: absolute;
+    left: -9999px;
+}
+.cbt__selects input:checked + label span::before {
+    color: #fff;
+    box-shadow: inset 0 0 0 10px #000;
+    border-color: #000;
+}
+.cbt__desc {
+    background-color: #e3edff;
+    padding: 10px 10px 10px 40px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.cbt__desc::before {
+    content: '';
+    position: absolute;
+    left: 16px; 
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z' /%3E%3C/svg%3E%0A");
+}
+.cbt__keyword {
+    background-color: #ffe1c4;
+    padding: 10px 20px 10px 40px;
+    margin-bottom: 5px;
+    position: relative;
+    display: inline-block;
+    border-radius: 40px;
+}
+.cbt__keyword::before {
+    content: '';
+    position: absolute;
+    left: 16px; 
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0' /%3E%3C/svg%3E%0A");
+}
 
 /* dog__wrap */
 .dog .tail, 
@@ -686,4 +956,31 @@
 }
 .dislike .tail {
   transform: rotate(0);
+}
+
+/* 미디어 쿼리 */
+@media (min-width: 1400px){
+    .cbt__quiz .cbt {
+        width: 32.3333%;
+    }
+}
+@media (max-width: 960px){
+    .cbt__quiz .cbt {
+        width: 100%;
+    }
+}
+@media (max-width: 800px){
+    .cbt__aside {
+        display: none;
+    }
+    .cbt__header {
+        width: 100%;
+        flex-direction: column;
+    }
+    .cbt__header h2 {
+        margin-bottom: 10px;
+    }
+    .cbt__conts {
+        width: 100%;
+    }
 }

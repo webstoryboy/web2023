@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+
+    <!-- SEO -->
+    <meta name="author" content="웹스토리보이">
+    <meta name="description" content="웹스토리보이와 함께 만드는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="웹스토리보이, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png"/>  
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/favicon.png"/> 
+    <link rel="apple-touch-icon" href="assets/ico/favicon.png"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="skip">
+        <a href="#">해더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="headerType" style="display:none">
+        <h1>사이트 로고</h1>
+    </header>
+    <!-- //headerType -->
+
+    <main id="mainType">
+        <section id="sliderType" class="nexon hide">
+            <h2 class="blind">슬라이드 영역</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">event</span>
+                        <h3 class="title">반려견 교육 D🐶gg</h3>
+                        <p class="desc">반려견 케어, 반려견 목욕, 반려견 여행, 반려견 패션, 반려견 커뮤니티 반려견과 관련된 모든 정보를 공유합니다.</p>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">상담 신청</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#"><span class="blind">이전 이미지</span></a>
+                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                        <a href="#" class="play"><span class="blind">플레이</span></a>
+                        <a href="#" class="stop"><span class="blind">정지</span></a>
+                    </div>
+                </div>
+                <!-- <div class="slider"></div>
+                <div class="slider"></div> -->
+            </div>
+        </section>
+        <!-- //sliderType -->
+
+        <section id="imageType" class="nexon section center">
+            <h2 class="section__h2">반려견을 키우는 방법</h2>
+            <p class="section__desc">반려견을 키우는 것은 책임감 있는 일입니다.</p>
+
+            <div class="image__inner container">
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="assets/img/imageType01_01.jpg" alt="충분한 운동 시간">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">충분한 운동 시간</h3>
+                        <p class="desc">반려견은 충분한 운동 시간을 필요로 합니다. 하루에 최소한 30분 이상 산책을 시켜주는 것이 좋습니다.</p>
+                        <a href="#" class="btn">자세히보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="assets/img/imageType01_02.jpg" alt="올바른 사료를 선택">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">올바른 사료를 선택</h3>
+                        <p class="desc">반려견에게 올바른 사료를 선택하는 것이 중요합니다. 견종, 나이, 체중 등에 따라 적절한 사료를 선택해야 합니다</p>
+                        <a href="#" class="btn">자세히보기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- //imageType -->
+
+        <section id="imgTextType" class="nexon section gray">
+            <h2 class="blind">이미지텍스트 영역</h2>
+            <div class="imgText__inner container">
+                <article class="text">
+                    <span>NOTICE</span>
+                    <h3>300종 이상의 반려견</h3>
+                    <p>세계적으로 약 300종 이상의 반려견이 있습니다. 일부 인기 있는 반려견 종류는 다음과 같습니다.</p>
+                    <ul>
+                        <li><a href="#">비글(Beagle)</a></li>
+                        <li><a href="#">닥스훈트(Dachshund)</a></li>
+                        <li><a href="#">보스턴 테리어(Boston Terrier)</a></li>
+                        <li><a href="#">불독(Bulldog)</a></li>
+                        <li><a href="#">불리(Bull Terrier)</a></li>
+                        <li><a href="#">사모예드(Samoyed)</a></li>
+                        <li><a href="#">시베리안 허스키(Siberian Husky)</a></li>
+                        <li><a href="#">슈나우저(Schnauzer)</a></li>
+                        <li><a href="#">요크셔 테리어(Yorkshire Terrier)</a></li>
+                        <li><a href="#">골든 리트리버(Golden Retriever)</a></li>
+                        <li><a href="#">코카 스파니엘(Cocker Spaniel)</li></a></li>
+                    </ul>
+                </article>
+                <article class="img i1">
+                    <a href="#">충성심 넘치는 반려견 </a>
+                </article>
+                <article class="img i2">
+                    <a href="#">똑똑한 반려견 </a>
+                </article>
+            </div>
+        </section>
+        <!-- //imgTextType -->
+
+        <section id="cardType" class="nexon section ">
+            <div class="container">
+                <h2 class="section__h2">반려견을 훈련시키는 방법</h2>
+                <p class="section__desc">반려견의 배변 교육은 쉽지 않은 일입니다. 하지만 올바른 방법을 사용하면 좋은 결과를 얻을 수 있습니다. 반려견의 훈련은 일정한 시간과 노력이 필요합니다. 가장 중요한 것은 인내심과 일관성입니다.</p>
+                <div class="card__inner">
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/img/cardType01_01.jpg" alt="긍정적인 강화법 사용하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">긍정적인 강화법 사용하기</h3>
+                            <p class="desc">긍정적인 강화법은 바람직한 행동을 보인 반려견에게 보상을 주는 방법입니다. 예를 들어, 반려견이 명령에 따라 행동하면 쿠키나 즉석 간식을 주는 등의 보상을 제공할 수 있습니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/img/cardType01_02.jpg" alt="명령어를 사용하여 훈련하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">명령어를 사용하여 훈련하기</h3>
+                            <p class="desc">반려견이 명령어를 이해하도록 훈련하는 것은 매우 중요합니다. "앉아", "누워", "기다려" 등의 명령어를 사용하여 훈련하면, 반려견은 이해하고 명령에 따라 행동합니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/img/cardType01_03.jpg" alt="일관성 유지하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">일관성 유지하기</h3>
+                            <p class="desc">반려견 훈련에서 가장 중요한 것은 일관성입니다. 반려견이 이해할 수 있는 명령어와 그에 대한 보상 방식을 결정하고, 일관성 있게 적용해야 합니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- //cardType -->
+
+        <section id="bannerType" class="banner__wrap nexon section center">
+            <h2 class="blind">배너 영역</h2>
+            <div class="banner__inner container">
+                <h3>반려견 유투브 교육</h3>
+                <p>다양한 반려견 교육은<br>유튜브를 통해 더욱 자세히 확인할 수 있습니다.</p>
+                <a href="#">youtube.com/webstoryboy</a>
+            </div>
+        </section>
+        <!-- //bannerType -->
+
+        <section id="textType" class="nexon section center">
+            <span class="section__small">notice</span>
+            <h2 class="section__h2 mb70">반려견 키울때 주의할점</h2>
+
+            <div class="text__inner container">
+                <div class="text t1">
+                    <h3 class="text__title">견종 선택</h3>
+                    <p class="text__desc">강아지의 크기, 에너지 수준, 태도 및 운동 요구사항을 고려하여 가족과 생활 환경에 적합한 견종을 선택해야 합니다. 견종에 특징과 환경조건을 고려해야 합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">충분한 운동과 활동</h3>
+                    <p class="text__desc">반려견은 많은 운동과 활동이 필요합니다. 일상적인 산책과 놀이는 견종, 나이, 건강 상태 등에 따라 달라질 수 있지만, 적어도 하루에 30분에서 1시간 정도의 활동을 권장합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">올바른 사료와 급여</h3>
+                    <p class="text__desc">강아지의 건강과 성장을 위해 올바른 사료와 급여를 제공하세요. 견종, 나이, 활동 수준 및 건강 상태에 따라 적절한 양과 종류를 선택해야 합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">정기적인 수의사 검진</h3>
+                    <p class="text__desc">반려견의 건강을 지속적으로 모니터링하고 예방 접종, 구충제, 치아 치료 등 필요한 의료 서비스를 제공하세요. 권장되는 검진 주기는 반려견의 나이, 건강 상태 및 생활 환경에 따라 다릅니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">교육과 훈련</h3>
+                    <p class="text__desc">반려견이 매너리즘을 배우고 다른 개와 사람들과 잘 지낼 수 있도록 교육과 훈련을 제공하세요. 올바른 훈련을 통해 반려견과의 관계를 향상시키고 불필요한 행동 문제를 방지할 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">충분한 사랑과 관심</h3>
+                    <p class="text__desc">반려견이 가장 필요로 하는 것은 주인의 사랑과 관심입니다. 꾸준한 규칙적인 관심을 제공하여 반려견과의 사이를 더욱 강화하여 친밀한 관계 유지가 중요합니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+            </div>
+        </section>
+        <!-- //textType-->
+    </main>
+    <!-- //mainType -->
+
+    <footer id="footerType" class="section gray">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>반려견 사이트</h3>
+                    <ul>
+                        <li><a href="#">소개하기</a></li>
+                        <li><a href="#">반려견 이야기</a></li>
+                        <li><a href="#">유기견 도움주기</a></li>
+                        <li><a href="#">반려견 만들기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>반려견 훈련소</h3>
+                    <ul>
+                        <li><a href="#">지역별 훈련소</a></li>
+                        <li><a href="#">서울 지역</a></li>
+                        <li><a href="#">강원도 지역</a></li>
+                        <li><a href="#">제주 지역</a></li>
+                        <li><a href="#">안양 지역</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>반려견 노하우</h3>
+                    <ul>
+                        <li><a href="#">충분한 운동하기</a></li>
+                        <li><a href="#">산책하기 좋은 곳</a></li>
+                        <li><a href="#">여행하기 좋은 곳</a></li>
+                        <li><a href="#">반려견 숙소</a></li>
+                        <li><a href="#">반려견 모토 여행</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>반려견 주의점</h3>
+                    <ul>
+                        <li><a href="#">병원균</a></li>
+                        <li><a href="#">접종 시기 주의점</a></li>
+                        <li><a href="#">홍역 주의</a></li>
+                        <li><a href="#">동사무소 신고</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>반려견 자랑하기</h3>
+                    <ul>
+                        <li><a href="#">소개하기</a></li>
+                        <li><a href="#">반려견 이야기</a></li>
+                        <li><a href="#">유기견 도움주기</a></li>
+                        <li><a href="#">사진 만들기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>이용정보</h3>
+                    <ul>
+                        <li><a href="#">개인정보</a></li>
+                        <li><a href="#">반려견 정보</a></li>
+                        <li><a href="#">반려견 신고하기</a></li>
+                        <li><a href="#">반려견 접종하기</a></li>
+                    </ul>
+                </div>
+            </div>
+            <address class="footer__right">
+                2023 웹스토리보이 반려견 사이트 Portfolio is Power<br>All Right Reserved
+            </address>
+        </div>
+    </footer>
+    <!-- //footerType -->
+</body>
+</html>

@@ -19,6 +19,7 @@
             <li><a href="quizEffect04.html">4</a></li>
             <li><a href="quizEffect05.html">5</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
+            <li><a href="quizEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -35,7 +36,7 @@
                         <div class="dog__wrap">
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
-                            <div class="count">총 5문제 남았습니다.</div>
+                            <div class="count"></div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -136,6 +137,7 @@
         let quizCount = 0;  //퀴즈 번호
         let quizScore = 0;  //현재 점수
         
+        
         // 문제출력
         const updateQuiz = (index) =>{
             let typeTag = `
@@ -175,7 +177,7 @@
             quizDesc.innerHTML = descTag;
 
             let quizLength = quizInfo.length - quizCount;
-            dogWrapCount.innerHTML = "총 "+ quizInfo.length+"문제 중에 " + (quizLength-1) + "문제 남았습니다.";
+            dogWrapCount.innerHTML = "총 "+ quizInfo.length +"문제 중에 "+(quizLength-1)+"문제 남았습니다.";
             
             // 보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -213,11 +215,13 @@
                 quizDesc.style.display = "block";
             }
 
-            let countT = Math.ceil((quizScore/quizInfo.length) * 100);
+            let countLast = Math.ceil((quizScore/quizInfo.length)*100);
+            let countResult = (countLast > 60) ? "합격" : "불합격";
 
+            //마지막 문제일 때
             if(quizCount == quizInfo.length - 1){
                 quizAnswer.style.display = "none";
-                dogWrapCount.innerHTML = "총 "+ quizScore + "문제를 맞추었습니다. 점수는 "+countT+" 점입니다.";
+                dogWrapCount.innerHTML = "총 "+quizScore+"문제를 맞추었습니다. 점수는 "+countLast+"점입니다. "+countResult+"입니다.";
             }
         }
 

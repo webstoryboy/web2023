@@ -78,9 +78,9 @@
                     <li><a href="#sample27">27. <strong>string.prototype.toLowerCase()</strong>       메서드는 문자열을 소문자로 설정하고, 소문자 문자열을 반환합니다.</a></li>
                     <li><a href="#sample28">28. <strong>string.prototype.toUpperCase()</strong>       메서드는 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</a></li>
                     <li><a href="#sample29">29. <strong>string.prototype.toString()</strong>          메서드는 데이터를 문자열로 변환하고, 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample30">30. <strong>string.prototype.trim()</strong> 🐠             메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample31">31. <strong>string.prototype.trimEnd()</strong>           메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
-                    <li><a href="#sample32">32. <strong>string.prototype.trimStart()</strong>         메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample30">30. <strong>string.prototype.trim()</strong> 🐠 메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample31">31. <strong>string.prototype.trimEnd()</strong> 메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample32">32. <strong>string.prototype.trimStart()</strong> 메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample33">33. <strong>string.prototype.valueOf()</strong>           메서드는 객체의 원시값을 반환합니다.</a></li>
                 </ul>
             </div>
@@ -217,6 +217,126 @@
                     </div>
                 </div>
                 <!-- //sample18 -->
+
+                <div id="sample19" class="sample">
+                    <h3>19. slice()</h3>
+                    <div class="notice">"문자열".slice(시작 위치, [끝나는 위치])</div>
+                    <ul>
+                        <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript".slice(0);          //javascript
+    "javascript".slice(1);          //avascript
+    "javascript".slice(2);          //vascript
+    "javascript".slice(0, 1);       //j
+    "javascript".slice(1, 2);       //a
+    "javascript".slice(0, 2);       //ja
+    "javascript".slice(0, 3);       //jav
+    "javascript".slice(5, 10);      //cript
+    "javascript".slice(5, -1);      //crip
+    "javascript".slice(5, -2);      //cri
+    "javascript".slice(-1);         //t
+    "javascript".slice(-2);         //pt
+    "javascript".slice(-3);         //ipt
+    "javascript".slice(-3, -1);     //ip
+    "javascript".slice(-3, -2);     //i
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample19 -->
+
+                <div id="sample22" class="sample">
+                    <h3>22. split()</h3>
+                    <div class="notice">"문자열".split(구분자, [제한])</div>
+                    <ul>
+                        <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript".split("");   //['j','a','v','a','s','c','r','i','p','t']
+    "java script".split("");   //['java','script']
+    "java scr ipt".split("");   //['java','scr', 'ipt']
+
+    "javascript".split("", 1);   //['j']
+    "javascript".split("", 2);   //['j','a']
+    "javascript".split("", 3);   //['j','a','v']
+
+    "java script".split(" ", 1);   //['java']
+    "java script".split(" ", 2);   //['java', 'script']
+
+    "javascript".split("j");   //['','avascript']
+    "javascript".split("a");   //['j','v','script']
+    "javascript".split("e");   //['javascript']
+
+    "java/scr/ipt".split("/");      //['java','scr','ipt']
+    "java&scr!ipt".split("&");      //['java','scr!ipt']
+    "java&scr!ipt".split("!");      //['java&scr','ipt']
+    "java&scr!ipt".split(/&|\!/);   //['java','scr','ipt']
+
+    "javascript".split("").join();                  //j,a,v,a,s,c,r,i,p,t
+    "javascript".split("").join("*");               //j*a*v*a*s*c*r*i*p*t
+    "javascript".split("").reverse().join();        //t,p,i,r,c,s,a,v,a,j
+    "javascript".split("").reverse().join("/");     //t/p/i/r/c/s/a/v/a/j
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample22 -->
+
+                <div id="sample30" class="sample">
+                    <h3>30. trim()</h3>
+                    <div class="notice">"문자열".trim()</div>
+                    <ul>
+                        <li>문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "javascript".trim("");          //javascript
+    "javascript  ".trim("");        //javascript
+    "  javascript".trim("");        //javascript
+    "  javascript  ".trim("");      //javascript
+    "  java  script  ".trim("");    //java script
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample30 -->
+
+                <div id="sample31" class="sample">
+                    <h3>31. trimEnd()</h3>
+                    <div class="notice">"문자열".trimEnd()</div>
+                    <ul>
+                        <li>메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "  javascript  ".trimEnd("");    //'  javascript'
+    "  javascript".trimEnd("");        //'  javascript'
+    "javascript  ".trimEnd("");      //'javascript'
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample31 -->
+
+                <div id="sample32" class="sample">
+                    <h3>32. trimStart()</h3>
+                    <div class="notice">"문자열".trimStart()</div>
+                    <ul>
+                        <li>문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    "  javascript  ".trimStart("");    //'javascript  '
+    "  javascript".trimStart("");        //'javascript'
+    "javascript  ".trimStart("");      //'javascript  '
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- //sample32 -->
             </div>
         </div>
     </main>
@@ -230,86 +350,15 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        "javascript reference".lastIndexOf("javascript");     //0
-        "javascript reference".lastIndexOf("javascripts");    //-1
-        "javascript reference".lastIndexOf("j");              //0
-        "javascript reference".lastIndexOf("a");              //3
-        "javascript reference".lastIndexOf("jv");             //-1
-        "javascript reference".lastIndexOf("reference");      //11
-        "javascript reference".lastIndexOf("r");              //15
-       
+        "javascript".trim("");      //javascript
+        "javascript ".trim("");     //javascript
+        " javascript ".trim("");    //javascript
+        " java script ".trim("");    //java script
 
-        // console.log("reference".indexOf("e"))           //1
-        // console.log("reference".lastIndexOf("e"))       //8
-        // console.log("reference".lastIndexOf("e", 0))    //-1
-        // console.log("reference".lastIndexOf("e", 1))    //1
-        // console.log("reference".lastIndexOf("e", 2))    //1
-        // console.log("reference".lastIndexOf("e", 3))    //3
-        // console.log("reference".lastIndexOf("e", 4))    //3
-        // console.log("reference".lastIndexOf("e", 5))    //5
-        // console.log("reference".lastIndexOf("e", 6))    //5
-
-        // console.log("reference".lastIndexOf("e"))       //8
-        // console.log("reference".lastIndexOf("e", 0))    //-1
-        // console.log("reference".lastIndexOf("e", 1))    //1
-        // console.log("reference".lastIndexOf("e", 2))    //1
-        // console.log("reference".lastIndexOf("e", 3))    //3
-        // console.log("reference".lastIndexOf("e", 4))    //3
-        // console.log("reference".lastIndexOf("e", 5))    //5
-        // console.log("reference".lastIndexOf("e", 6))    //5
-
-        // console.log("javascript reference".lastIndexOf("e"))        //19
-        // console.log("javascript reference".lastIndexOf("e", 0))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 1))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 2))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 3))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 4))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 5))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 6))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 7))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 8))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 9))     //-1
-        // console.log("javascript reference".lastIndexOf("e", 10))    //-1
-        // console.log("javascript reference".lastIndexOf("e", 11))    //-1
-        // console.log("javascript reference".lastIndexOf("e", 12))    //12
-        // console.log("javascript reference".lastIndexOf("e", 13))    //12
-        // console.log("javascript reference".lastIndexOf("e", 14))    //14
-        // console.log("javascript reference".lastIndexOf("e", 15))    //14
-        // console.log("javascript reference".lastIndexOf("e", 16))    //16
-        // console.log("javascript reference".lastIndexOf("e", 17))    //16
-        // console.log("javascript reference".lastIndexOf("e", 18))    //16
-        // console.log("javascript reference".lastIndexOf("e", 19))    //19
-
-        // console.log("javascript reference".lastIndexOf("javascript"))     //0
-        // console.log("javascript reference".lastIndexOf("javascript", 0))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 1))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 2))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 3))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 4))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 5))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 6))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 7))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 8))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 9))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 10))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 11))  //0
-        // console.log("javascript reference".lastIndexOf("javascript", 12))  //0
-
-        console.log("javascript reference".indexOf("reference"))            //11
-        console.log("javascript reference".lastIndexOf("reference"))        //11
-        console.log("javascript reference".lastIndexOf("reference", 0))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 1))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 2))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 3))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 4))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 5))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 6))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 7))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 8))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 9))     //-1
-        console.log("javascript reference".lastIndexOf("reference", 10))    //-1
-        console.log("javascript reference".lastIndexOf("reference", 11))    //11
-        console.log("javascript reference".lastIndexOf("reference", 11))    //12
+        " javascript ".trimStart("");    //javascript
+        " javascript ".trimEnd("");    //javascript
+        
+        console.log("java script ".trim(""))
     </script>
  
 </body>
