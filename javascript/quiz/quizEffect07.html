@@ -164,7 +164,7 @@
                             <input type="radio" id="select${number}_4" name="select${number}" value="${number+1}_4" onclick="answerSelect(this)">
                             <label for="select${number}_4"><span>${question.choice4}</span></label>
                         </div>
-                        <div class="cbt__desc">${question.desc}</div>
+                        <div class="cbt__desc hide">${question.desc}</div>
                     </div>
                 `);
 
@@ -203,6 +203,19 @@
                 } else {
                     console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
+                    
+                    //오답 일 경우 정답 표시
+                    const label = cbtSelects[number].querySelectorAll("label");
+                    label[question.answer-1].classList.add("correct");
+                }
+
+                // 설명 숨기기
+                const quizDesc = document.querySelectorAll(".cbt__desc");
+
+                if(quizDesc[number].innerText == "undefined"){
+                    quizDesc[number].classList.add("hide");
+                } else {
+                    quizDesc[number].classList.remove("hide");
                 }
             });
         }

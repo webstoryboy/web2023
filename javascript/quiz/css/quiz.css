@@ -470,6 +470,7 @@
 .cbt__selects label {
     display: flex;
 }
+
 .cbt__selects label span {
     font-size: 1rem;
     padding: 10px 10px 10px 30px;
@@ -514,11 +515,21 @@
     box-shadow: inset 0 0 0 10px #000;
     border-color: #000;
 }
+.cbt__selects label.correct span::before {
+    border-color: red;
+    box-shadow: inset 0 0 0 10px red;
+    color: #fff;
+}
+
+
 .cbt__desc {
     background-color: #e3edff;
     padding: 10px 10px 10px 40px;
     margin-bottom: 5px;
     position: relative;
+}
+.cbt__desc.hide {
+    display: none;
 }
 .cbt__desc::before {
     content: '';
