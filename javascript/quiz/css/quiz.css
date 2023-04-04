@@ -372,6 +372,7 @@
     padding: 10px 27px 10px 44px;
     border-radius: 40px;
     color: #fff;
+    cursor: pointer;
 }
 .cbt__submit::before {
     content: '';
