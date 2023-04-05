@@ -32,7 +32,7 @@
     <main id="main">
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
-                <h2>2020년 1회 정보처리기능사 기출문제</h2>
+                <h2 class="cbt__header__title"></h2>
             </div>
             <div class="cbt__conts">
                 <div class="cbt__quiz">
@@ -94,12 +94,13 @@
                 <div class="cbt__modal1">
                     <h2>기능사 시험 도전하기</h2>
                     <div class="cbt__choice">
-                        <select name="cbtTime" id="cbtTime">
+                        <select name="cbtTime" class="cbt__index" onchange="changeSelect(this)">
+                            <option value="" selected disabled>정보처리기능사 선택하기</option>
                             <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
-                            <option value="gineungsaJC2005_05">정보처리기능사 2005년 4회</option>
+                            <option value="gineungsaJC2005_04">정보처리기능사 2005년 4회</option>
                             <option value="gineungsaJC2005_05">정보처리기능사 2005년 5회</option>
                             <option value="gineungsaJC2006_01">정보처리기능사 2006년 1회</option>
-                            <option value="gineungsaJC2006_03">정보처리기능사 2006년 2회</option>
+                            <option value="gineungsaJC2006_02">정보처리기능사 2006년 2회</option>
                             <option value="gineungsaJC2006_03">정보처리기능사 2006년 3회</option>
                             <option value="gineungsaJC2006_05">정보처리기능사 2006년 5회</option>
                             <option value="gineungsaJC2007_01">정보처리기능사 2007년 1회</option>
@@ -118,7 +119,8 @@
                             <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
                             <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
                         </select>
-                        <select name="cbtTime" id="cbtTime">
+                        <select name="cbtTime" class="cbt__index" onchange="changeSelect(this)">
+                            <option value="" selected disabled>웹디자인기능사 선택하기</option>
                             <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
                             <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
                             <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
@@ -146,7 +148,7 @@
                         </select>
                     </div>
                     <div class="cbt__view">당신은 <span>웹디자인 기능사시험을</span> 선택했습니다.</div>
-                    <button>시작하기</button>
+                    <button class="cbt__start__btn">시작하기</button>
                 </div>
             </div>
         </div>
@@ -161,10 +163,27 @@
         const cbtSubmit = document.querySelector(".cbt__submit");
         const cbtRest = document.querySelector(".cbt__rest");
         const cbtLength = document.querySelector(".cbt__length");
+        const cbtIndex = document.querySelector(".cbt__index");
+        const cbtView = document.querySelector(".cbt__view span");
+        const cbtHeaderTitle = document.querySelector(".cbt__header__title");
+        const cbtStartBtn = document.querySelector(".cbt__start__btn");
+        const cbtStart = document.querySelector(".cbt__start");
+        const cbtTime = document.querySelector(".cbt__time");
 
         let questionAll = [];                  //모든 퀴즈 정보
         let questionLength = 0;                //전체 문제수
         let questionRest = questionLength;     //남은 문제수
+        let questionTitle = "";
+        let questionTime = ""; 
+        let questionTimeRemain = "1000";
+
+        //시작하기
+        const startQuiz = () => {
+            cbtStart.classList.add("hide");
+
+            //시간 설정
+            questionTime = setInterval(reduceTime, 1000);
+        }
 
         //데이터 가져오기
         const dataQuestion = () => {
@@ -329,6 +348,57 @@
             cbtRest.innerHTML = questionLength - answerInputs.length;
         }
 
+        // function chageSelect(){  
+        //     let selectValue = cbtChoice.options[cbtChoice.selectedIndex].value;  
+        //     let selectText = cbtChoice.options[cbtChoice.selectedIndex].text;  
+            
+        //     cbtView.innerHTML = selectText;
+        // }  
+        // function chageSelect2(){  
+        //     let selectValue = cbtChoice2.options[cbtChoice2.selectedIndex].value;  
+        //     let selectText = cbtChoice2.options[cbtChoice2.selectedIndex].text;  
+            
+        //     cbtView.innerHTML = selectText;
+        // }  
+        
+        //문제 선택
+        const changeSelect = (e) => {
+            let selectValue = e.value;
+            let selectText = e.options[cbtIndex.selectedIndex].text;
+
+            cbtView.innerHTML = selectText;
+            cbtHeaderTitle.innerHTML = selectText;
+        }
+
+        // 시간 설정
+        const reduceTime = () => {
+            questionTimeRemain--;
+            console.log(questionTimeRemain);
+
+            if(questionTimeRemain == 0) endQuiz();
+
+            cbtTime.innerText = displayTime();
+        }
+
+        // 시간 표시
+        const displayTime = () => {
+            if(questionTimeRemain <= 0){
+                return "0분 00초";
+            } else {
+                let minutes = Math.floor(questionTimeRemain / 60);
+                let seconds = questionTimeRemain % 60;
+                
+                if(seconds < 10) seconds = "0" + seconds;
+                return minutes + "분 " + seconds + "초";
+            }
+        }
+
+        // 끝
+        const endQuiz = () => {
+            alert("끝났습니다.")
+        }
+
+        cbtStartBtn.addEventListener("click", startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();
 
