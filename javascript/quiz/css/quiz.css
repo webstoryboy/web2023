@@ -594,7 +594,6 @@
 }
 .cbt__start > div {
     width: 50%;
-    height: 50vh;
     background-color: #fff;
     border: 8px ridge #cacaca;
 }
@@ -613,27 +612,35 @@
 .cbt__modal1 select {
     border: 1px solid #cacaca;
     padding: 10px 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: 'PyeongChang';
 }
-.cbt__modal1 button {
+.cbt__start__btn {
     width: 350px; 
     border-radius: 200px;
-    padding: 20px;
+    padding: 15px;
     border: 0;
     border: 1px solid #e0e0ff;
     background-color: #f0f0ff;
     font-family: 'PyeongChang';
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
 }
-.cbt__modal1 button:hover {
+.cbt__start__btn:hover {
     background-color: #d2d2ff;
 }
 .cbt__view {
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     position: relative;
     z-index: 10;
+    line-height: 1.8;
+}
+.cbt__view input {
+    border: 1px solid #d2d2ff;
+    padding: 2px 10px;
+    font-family: 'PyeongChang';
+    border-radius: 20px;
 }
 .cbt__view span {
     position: relative;
@@ -647,7 +654,7 @@
     height: 10px;
     z-index: -1;
     border-radius: 20px;
-    background-color: #e0e0ffa2;
+    background-color: #e0e0fff0;
 }
 
 /* dog__wrap */
