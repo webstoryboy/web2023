@@ -185,8 +185,8 @@
         }
  
         //데이터 가져오기
-        const dataQuestion = (value) => {
-            fetch(`https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`)
+        const dataQuestion = async (value) => {
+            await fetch(`https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`)
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
@@ -276,7 +276,21 @@
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
 
-            
+            // 설명 없는거 제거
+            document.querySelectorAll(".cbt__question__desc").forEach(desc => {
+                if(desc.innerText === "undefined"){
+                    desc.classList.add("hide");
+                }
+            });
+
+            // 이미지가 없는거 제거
+            document.querySelectorAll(".cbt__question__img").forEach(img => {
+                let src = img.querySelector("img").src;
+                
+                if(src.includes("undefined")){
+                    img.classList.add("hide");
+                }
+            })
         }
 
         
