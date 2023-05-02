@@ -19,13 +19,15 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #410b0b;
+    background-color: #410b0b86;
+    backdrop-filter: blur(20px);
     width: 100%;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
+    box-shadow: 0 0 10px #410b0b86;
 }
 #header h1 {
     font-size: 14px;
