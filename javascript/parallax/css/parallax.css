@@ -1,3 +1,8 @@
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
 /* header */
 #header {
     position: absolute;
@@ -109,22 +114,28 @@
 .parallax_item__imgWrap {
     width: 100%;
     padding-bottom: 56.25%;
-    background-color: #000;
+    /* background-color: #000; */
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
+    overflow: hidden;
 }
 .parallax__item__img {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
     background-image: url(../img/effect_bg18-min.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     filter: saturate(0%);
     transition: all 1s;
+}
+.parallax__item__img:hover {
+    filter: saturate(100%);
+    transform: scale(1.025);
+    cursor: pointer;
 }
 .parallax__item:nth-child(1) .parallax__item__img {
     background-image: url(../img/effect_bg18-min.jpg);
@@ -159,6 +170,8 @@
     margin-top: -5vw;
     margin-left: -4vw;
     word-break: keep-all;
+    position: relative;
+    z-index: 100;
 }
 .parallax__item:nth-child(even) .parallax__item__desc {
     margin-left: auto;
@@ -210,6 +223,32 @@
 }
 .parallax__dot li.active a {
     transform: scale(0.4);
+}
+.parallax__top {
+    position: fixed;
+    right: -200px;
+    bottom: 20px;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+.parallax__top.show {
+    right: 20px;
+}
+.parallax__top a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+.parallax__top a:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 @media (max-width: 1200px){
