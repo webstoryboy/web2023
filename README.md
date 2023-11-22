@@ -1,30 +1,3 @@
-## client
-npx create-react-app .
-npm install react-bootstrap bootstrap
-
-# server
-npm init -y;
-npm install express --save;
-npm install nodemon --save;
-npm install path --save;
-
-## 제작과정
-```js
-const express = require("express");
-const app = express();
-const port = 5050;
-
-app.listen(port, () => {
-    console.log("running --> " + port);
-})
-
-app.get("/", (req, res) => {
-    res.send("Hello World");
-})
-```
-- express 설치 과정
-- express 설치 과정
-
 
 
 # web2023
