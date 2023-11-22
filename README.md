@@ -9,7 +9,7 @@ npm install nodemon --save;
 npm install path --save;
 
 ## 제작과정
-`
+```
 const express = require("express");
 const app = express();
 const port = 5050;
@@ -21,7 +21,7 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
     res.send("Hello World");
 })
-`
+```
 - express 설치 과정
 
 
